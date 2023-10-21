@@ -1,0 +1,37 @@
+Задание 1:
+cat > f1
+cat > f2
+cat f1 f2 > f12
+mv f12 newf
+
+Задание 2:
+touch newfile
+mkdir newdir
+mv newfile newdir
+cd newdir
+cd ..
+rm f1 f2 newf
+rm -fr newdir
+
+Задание 3: 
+cat > file1
+cp file1 file2
+ln -s file1 file3
+ln file1 file4
+ll
+rm file1
+Перестал работать file3
+cat file2
+cat file3
+cat file4
+
+Задание 4:
+mv file2 f2
+rm file3
+mv file4 f4
+touch f3
+ln -s f3 f1
+mkdir file1
+mv f1 file
+mv f3 file
+mv f1 .. 
