@@ -1,0 +1,13 @@
+Задание1
+touch file1
+touch file2
+chmod u=rw,g=rw,o=r file1
+chmod u=rw,g=,o=r file2
+chmod 664 file1
+chmod file2
+
+Задание2
+sudo adduser user2
+sudo useradd user1 -s /bin/bash -m -d /home/user1
+sudo deluser -f user1
+sudo deluser -f user2
