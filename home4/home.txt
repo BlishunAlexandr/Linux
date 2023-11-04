@@ -1,0 +1,30 @@
+Задание 1:
+apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+sudo apt install docker-ce
+
+Задание 2:
+wget https://download.virtualbox.org/virtualbox/7.0.12/virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
+sudo dpkg -i virtualbox-7.0_7.0.12-159484~Ubuntu~jammy_amd64.deb
+sudo apt -f install
+sudo dpkg --purge virtualbox-7.0
+
+Задание 3:
+snap install spotify
+snap remove spotify
+
+Задание 4:
+sudo nano /etc/crontab
+
+*/3 * * * *   root    mkdir /home/sasha/newdir echo "Hello world" > a.txt
+*/3 * * * *   root    touch /home/sasha/newdir/a.txt
+*/3 * * * *   root    echo "Hello world" > a.txt
+
+
+
+
+
+
+
+
