@@ -1,0 +1,9 @@
+Задание 1
+iptables -A INPUT -p TCP --dport 22 -j ACCEPT
+iptables -A INPUT -p TCP --dport 80 -j ACCEPT
+iptables -A INPUT -p TCP --dport 443 -j ACCEPT
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -P DROP
+
+Задание 2
+iptables -A INPUT -p TCP -s 3.4.5.6 -j DROP
