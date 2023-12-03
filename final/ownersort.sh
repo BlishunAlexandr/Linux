@@ -13,7 +13,7 @@ for file in "$folder"/*
         		if [ ! -d "$folder/$owner" ]; 
 			then
             			mkdir "$folder/$owner"
-       		fi
+       			fi
         
       		cp "$file" "$folder/$owner/"
         
