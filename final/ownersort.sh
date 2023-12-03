@@ -1,14 +1,22 @@
-if [ ! -d "$1" ]; 
-then
-  	echo "Directory not found"
-  	exit 1
+if [ ! -d "$folder" ] 
+	then
+    		echo "Folder not found"
+    		exit 1
 fi
 
-cd "$1"
-
-for file in *; 
-do
-	owner=$(stat -c "%U" "$file")
-	mkdir -p "$owner"	
-	cp "$file" "$owner/"
+for file in "$folder"/* 
+	do
+   		if [ -f "$file" ]; 
+		then
+        		owner=$(stat -c '%U' "$file")
+        
+        		if [ ! -d "$folder/$owner" ]; 
+			then
+            		mkdir "$folder/$owner"
+       		fi
+        
+      		cp "$file" "$folder/$owner/"
+        
+       		chown "$owner" "$folder/$owner/$(basename "$file")"
+    		fi
 done
