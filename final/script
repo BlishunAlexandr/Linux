@@ -1,0 +1,10 @@
+dir=$1
+if [ -d "$dir" ]
+        then
+                echo "hi"
+                find "$dir" -type f \( -name "*.bak" -o -name "*.tmp" -o -name "*.backup" \) -de>
+
+        else
+                echo "dir not found"
+                exit 1
+fi
