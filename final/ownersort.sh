@@ -15,8 +15,8 @@ for file in "$folder"/*
             			mkdir "$folder/$owner"
        			fi
         
-      		cp "$file" "$folder/$owner/"
+      			cp "$file" "$folder/$owner/"
         
-       		chown "$owner" "$folder/$owner/$(basename "$file")"
+       			chown "$owner" "$folder/$owner/$(basename "$file")"
     		fi
 done
