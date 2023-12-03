@@ -6,11 +6,11 @@ fi
 
 for file in "$folder"/* 
 	do
-   		if [ -f "$file" ]; 
+   		if [ -f "$file" ]
 		then
         		owner=$(stat -c '%U' "$file")
         
-        		if [ ! -d "$folder/$owner" ]; 
+        		if [ ! -d "$folder/$owner" ] 
 			then
             			mkdir "$folder/$owner"
        			fi
